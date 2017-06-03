@@ -121,6 +121,11 @@ wget.callbacks.get_urls = function(file, url, is_css, iri)
   if allowed(url, nil) then
     html = read_file(file)
 
+    if string.match(html, "R%-18") then
+      print("Needs login, skipping...")
+      abortgrab = true
+    end
+
     if string.match(url, "^https?://chat%.pixiv%.net/roomtop%.php%?id=[0-9]+$") then
       local roomtop = string.match(url, "^https?://chat%.pixiv%.net/roomtop%.php%?id=([0-9]+)$")
       check("http://chat.pixiv.net/api/capturepos.php?roomid=" .. roomtop)

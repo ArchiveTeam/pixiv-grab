@@ -58,7 +58,7 @@ if not WGET_LUA:
 #
 # Update this each time you make a non-cosmetic change.
 # It will be added to the WARC files and reported to the tracker.
-VERSION = "20170603.01"
+VERSION = "20170603.02"
 USER_AGENT = 'ArchiveTeam'
 TRACKER_ID = 'pixiv'
 TRACKER_HOST = 'tracker.archiveteam.org'
