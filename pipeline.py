@@ -221,8 +221,8 @@ project = Project(
     title = "pixiv Chat",
     project_html = """
     <img class="project-logo" alt="logo" src="http://source.pixiv.net/source/chat/images/logo.gif" />
-    <h2>pixiv Chat <span class="links"><a href="http://chat.pixiv.net/">Website</a> &middot; <a href="http://tracker.archiveteam.org/pixiv-grab/">Leaderboard</a></span></h2>
-    <p>Getting killed June 5th.</p>
+    <h2>pixiv Chat <span class="links"><a href="http://chat.pixiv.net/">Website</a> &middot; <a href="http://tracker.archiveteam.org/pixiv/">Leaderboard</a></span></h2>
+    <p>Pixiv's oekaki chat service is getting washed away on June 15th (JST).</p>
     """,
     utc_deadline = datetime.datetime(2017, 6, 15, 23, 59, 0)
 )
