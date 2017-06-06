@@ -1,7 +1,7 @@
 pixiv-grab
 =============
 
-More information about the archiving project can be found on the ArchiveTeam wiki: [Pixiv Chat](http://archiveteam.org/index.php?title=Pixiv Chat)
+More information about the archiving project can be found on the ArchiveTeam wiki: [Pixiv Chat](http://archiveteam.org/index.php?title=Pixiv_Chat)
 
 Setup instructions
 =========================
