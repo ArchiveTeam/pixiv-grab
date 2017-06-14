@@ -58,7 +58,7 @@ if not WGET_LUA:
 #
 # Update this each time you make a non-cosmetic change.
 # It will be added to the WARC files and reported to the tracker.
-VERSION = "20170605.01"
+VERSION = "20170614.01"
 USER_AGENT = 'Archive Team'
 TRACKER_ID = 'pixiv'
 TRACKER_HOST = 'tracker.archiveteam.org'
@@ -200,6 +200,9 @@ class WgetArgs(object):
         if item_type == 'roomtop':
             wget_args.extend(['--warc-header', 'pixiv-roomtop: {i}'.format(i=item_value)])
             wget_args.append('http://chat.pixiv.net/roomtop.php?id={i}'.format(i=item_value))
+        elif item_type == 'tag':
+            wget_args.extend(['--warc-header', 'pixiv-tag: {i}'.format(i=item_value)])
+            wget_args.append('http://chat.pixiv.net/search.php?searchtag={i}'.format(i=item_value))
         else:
             raise Exception('Unknown item')
 

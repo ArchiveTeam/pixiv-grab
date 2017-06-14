@@ -22,6 +22,13 @@ ids[item_value] = true
 
 local discotags = {}
 local img_prefix = nil
+local search_string = nil
+
+if item_type == "tag" then
+  search_string = "([0-9A-F%%]+)"
+elseif item_type == "roomtop" then
+  search_string = "([0-9a-f]+)"
+end
 
 read_file = function(file)
   if file then
@@ -46,7 +53,7 @@ allowed = function(url, parenturl)
   end
 
   if string.match(url, "^https?://[^/]*pixiv%.net") then
-    for id in string.gmatch(url, "([0-9a-f]+)") do
+    for id in string.gmatch(url, search_string) do
       if ids[id] == true then
         return true
       end
